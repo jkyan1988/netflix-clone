@@ -1,14 +1,16 @@
 import axios from "axios";
 import Hero from "../components/Hero";
 import PopularMovie from "../components/PopularMovie";
+import TopRated from "../components/TopRated";
 import { server } from "../config";
 
 export default function Home({ movies }) {
-  console.log(movies)
+
   return (
     <div className="bg-gray-700">
       <Hero />
       <PopularMovie movies={movies.result} />
+      <TopRated movies={movies.result} />
     </div>
   )
 }
